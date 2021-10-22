@@ -1,15 +1,15 @@
-import { Container,Col,Row } from "reactstrap";
-import FilmList from "./components/FilmList"
+import { Container, Col, Row } from "reactstrap";
+import AddForm from "./components/AddForm";
+import FilmList from "./components/FilmList";
 
 function App() {
   return (
     <div>
       <Container>
+        <AddForm />
         <Row>
           <Col>
-          <FilmList>
-
-          </FilmList>
+            <FilmList></FilmList>
           </Col>
         </Row>
       </Container>
