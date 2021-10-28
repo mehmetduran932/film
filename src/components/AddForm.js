@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Button, Input } from "@chakra-ui/react";
+import { Button } from "reactstrap";
 import { connect } from "react-redux";
 import { addFilms } from "../Redux/actions/filmActions";
 
@@ -15,36 +15,31 @@ function AddForm({ addFilms }) {
 
   return (
     <>
+      <h1>Film Ekle</h1>
       <div>
         <label>Film Adı: </label>
-        <Input
+        <input
           type="text"
           name="name"
-          placeholder="Film Adı"
-          size="md"
           value={name}
           onChange={(e) => setName(e.target.value)}
-        ></Input>
+        ></input>
         <label>Yönetmen: </label>
-        <Input
+        <input
           type="text"
           name="director"
           value={director}
-          placeholder="Yönetmen"
-          size="md"
           onChange={(e) => setDirector(e.target.value)}
-        ></Input>
+        ></input>
         <label>Afiş Linki: </label>
-        <Input
+        <input
           type="text"
           name="image"
-          placeholder="Afiş Url"
-          size="md"
           value={image}
           onChange={(e) => setImage(e.target.value)}
-        ></Input>
+        ></input>
       </div>
-      <Button colorScheme="blue" onClick={() => add()}>
+      <Button name="save" color="success" size="lg" onClick={() => add()}>
         Film Ekle
       </Button>
     </>
