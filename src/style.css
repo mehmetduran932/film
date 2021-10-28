@@ -1,0 +1,10 @@
+.App {
+  font-family: sans-serif;
+  text-align: left;
+}
+
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}

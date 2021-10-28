@@ -1,18 +1,17 @@
-import { Container, Col, Row } from "reactstrap";
+import { Col, Row, Container } from "reactstrap";
 import AddForm from "./components/AddForm";
 import FilmList from "./components/FilmList";
 
 function App() {
   return (
     <div>
-      <Container>
+      {/* <div>
         <AddForm />
-        <Row>
-          <Col>
-            <FilmList></FilmList>
-          </Col>
-        </Row>
-      </Container>
+      </div> */}
+
+      <div>
+        <FilmList></FilmList>
+      </div>
     </div>
   );
 }
