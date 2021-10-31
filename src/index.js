@@ -7,6 +7,7 @@ import { reducer } from "./Redux/reducers/index";
 import { Provider } from "react-redux";
 import { createStore } from "redux";
 import { ChakraProvider } from "@chakra-ui/react";
+import "../src/Box.css";
 
 const store = createStore(reducer);
 

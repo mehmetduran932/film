@@ -1,20 +1,19 @@
 import React from "react";
 import { connect } from "react-redux";
-import { getFilms, removeFilms } from "../Redux/actions/filmActions";
+import { getFilms } from "../Redux/actions/filmActions";
 import BoxForm from "./BoxForm";
 import "../../src/Box.css";
 function FilmList({ films }) {
   console.log(films);
   return (
-    <div>
+    <div className="container">
       {films.map((film) => (
-        <div className="container">
+        <div>
           <BoxForm
             src={film.image}
             name={film.name}
             director={film.director}
             counter={film}
-            
           />
         </div>
       ))}
@@ -28,4 +27,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, { getFilms})(FilmList);
+export default connect(mapStateToProps, { getFilms })(FilmList);
