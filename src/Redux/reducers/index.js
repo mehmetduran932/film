@@ -13,10 +13,10 @@ export const reducer = (state = INITIAL_STATE, action) => {
         ...state,
         films: [
           {
-            id: state.films.length,
-            name: action.payload,
-            director: action.payload,
-            image: action.payload,
+            id: state.films.length + 1,
+            name: action.payload.name,
+            director: action.payload.director,
+            image: action.payload.image,
           },
           ...state.films,
         ],

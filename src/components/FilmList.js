@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { getFilms } from "../Redux/actions/filmActions";
+import { getFilms} from "../Redux/actions/filmActions";
 import BoxForm from "./BoxForm";
 import "../../src/Box.css";
 function FilmList({ films }) {
@@ -14,6 +14,7 @@ function FilmList({ films }) {
             name={film.name}
             director={film.director}
             counter={film}
+            
           />
         </div>
       ))}
@@ -27,4 +28,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, { getFilms })(FilmList);
+export default connect(mapStateToProps, { getFilms})(FilmList);

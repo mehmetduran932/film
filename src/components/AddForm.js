@@ -3,14 +3,19 @@ import { Button, Input } from "@chakra-ui/react";
 import { connect } from "react-redux";
 import { addFilms } from "../Redux/actions/filmActions";
 
-function AddForm({ addFilms }) {
+function AddForm({ addFilms}) {
   const [name, setName] = useState("");
   const [director, setDirector] = useState("");
   const [image, setImage] = useState("");
 
-  useEffect(() => {}, [name, director, image]);
+  useEffect(() => {
+    console.log(name);
+    console.log(director);
+    console.log(image);
+  }, [name, director, image]);
   const add = () => {
     addFilms(name, director, image);
+    
   };
 
   return (
@@ -53,7 +58,7 @@ function AddForm({ addFilms }) {
 
 const mapStateToProps = (state) => {
   return {
-    films: state.films
+    films: state.films,
   };
 };
 export default connect(mapStateToProps, { addFilms })(AddForm);

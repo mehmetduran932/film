@@ -3,7 +3,7 @@ export const data = [
     id: 1,
     name: "Karayip Korsanları",
     director: "Gore Verbinski",
-    
+
     image:
       "https://tr.web.img4.acsta.net/medias/nmedia/18/84/05/33/19771364.jpg",
   },

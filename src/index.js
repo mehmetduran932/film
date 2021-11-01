@@ -5,11 +5,12 @@ import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { reducer } from "./Redux/reducers/index";
 import { Provider } from "react-redux";
-import { createStore } from "redux";
+import { createStore,applyMiddleware } from "redux";
 import { ChakraProvider } from "@chakra-ui/react";
+import thunk from "redux-thunk"
 import "../src/Box.css";
 
-const store = createStore(reducer);
+const store = createStore(reducer,applyMiddleware(thunk));
 
 ReactDOM.render(
   <Provider store={store}>
